@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JNPhotosViewer_Example' do
+  pod 'JNPhotosViewer', :path => '../'
+
+  target 'JNPhotosViewer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

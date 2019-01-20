@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/JNPhotosViewer.svg?style=flat)](https://cocoapods.org/pods/JNPhotosViewer)
 [![Platform](https://img.shields.io/cocoapods/p/JNPhotosViewer.svg?style=flat)](https://cocoapods.org/pods/JNPhotosViewer)
 
+## Preview
+
+<img src="https://github.com/JNDisrupter/JNSegmentedControl/raw/master/Images/preview.gif" width="280"/> 
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

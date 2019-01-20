@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  JNPhotosViewer
 //
-//  Created by mohammadnabulsi on 09/06/2018.
-//  Copyright (c) 2018 mohammadnabulsi. All rights reserved.
+//  Created by JN Disrupter on 9/5/18.
+//  Copyright © 2018 JN Disrupter. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }

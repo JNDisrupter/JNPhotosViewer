@@ -1,0 +1,6 @@
+framework module JNMultipleImages {
+  umbrella header "JNMultipleImages-umbrella.h"
+
+  export *
+  module * { export * }
+}

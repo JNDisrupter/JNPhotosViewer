@@ -1,30 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Sm-IK-Mwc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Navigation Controller-->
+        <scene sceneID="moD-tX-cfo">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="JNPhotosViewer_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <navigationController id="9Sm-IK-Mwc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J7M-ri-fK5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MZL-wt-v5h" kind="relationship" relationship="rootViewController" id="GC3-nf-NIE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpa-Bz-4Qh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-678" y="134"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="ko9-Kh-aTv">
+            <objects>
+                <tableViewController id="MZL-wt-v5h" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eay-HV-HLy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="LoY-tD-Zgr">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="UCx-hV-5Px" style="IBUITableViewCellStyleDefault" id="BUT-cW-bYx">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BUT-cW-bYx" id="TQ3-4c-8qU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Single image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UCx-hV-5Px">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ofJ-gX-7Xj" kind="show" id="kSA-2Y-mgU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="0P7-Ln-e08" style="IBUITableViewCellStyleDefault" id="YJz-4V-0x7">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YJz-4V-0x7" id="7F1-e6-rAm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Multiple images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0P7-Ln-e08">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="a2F-K2-UGh" kind="show" id="eSW-CF-mKX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="MZL-wt-v5h" id="pOA-Pa-Wlk"/>
+                            <outlet property="delegate" destination="MZL-wt-v5h" id="9jP-qm-kz9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ELg-8j-B4P"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MG7-S4-aFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63" y="134"/>
+        </scene>
+        <!--Single Image View Controller-->
+        <scene sceneID="7kL-BK-9Je">
+            <objects>
+                <viewController id="ofJ-gX-7Xj" customClass="SingleImageViewController" customModule="JNPhotosViewer_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GkI-RW-Peu"/>
+                        <viewControllerLayoutGuide type="bottom" id="GrJ-ni-kd1"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="pXm-Ce-XJl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NatureImage1" translatesAutoresizingMaskIntoConstraints="NO" id="0f3-rH-83N">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0f3-rH-83N" secondAttribute="height" id="vVk-4e-kKk"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7ls-vE-EUA" appends="YES" id="IhX-Et-fs0"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0f3-rH-83N" secondAttribute="trailing" id="5La-NI-ewk"/>
+                            <constraint firstItem="0f3-rH-83N" firstAttribute="leading" secondItem="pXm-Ce-XJl" secondAttribute="leading" id="hgP-ii-7MG"/>
+                            <constraint firstItem="0f3-rH-83N" firstAttribute="centerY" secondItem="pXm-Ce-XJl" secondAttribute="centerY" id="ml9-30-G5m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="0f3-rH-83N" id="ftk-uP-aQL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3Y-Gw-zct" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7ls-vE-EUA">
+                    <connections>
+                        <action selector="didTapImageView:" destination="ofJ-gX-7Xj" id="8Kl-ja-5FM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="136.28185907046478"/>
+        </scene>
+        <!--Multiplemages View Controller-->
+        <scene sceneID="k94-cG-JMq">
+            <objects>
+                <viewController id="a2F-K2-UGh" customClass="MultiplemagesViewController" customModule="JNPhotosViewer_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LTB-P4-Nbu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Urs-vi-BDI"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="F3M-G1-80v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K67-0J-55q" customClass="JNMultipleImagesView" customModule="JNMultipleImages">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="K67-0J-55q" secondAttribute="height" id="YuS-a1-zmT"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lq2-2n-b5A" appends="YES" id="NJa-Dj-DDo"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K67-0J-55q" firstAttribute="centerY" secondItem="F3M-G1-80v" secondAttribute="centerY" id="2ar-14-FBG"/>
+                            <constraint firstAttribute="trailing" secondItem="K67-0J-55q" secondAttribute="trailing" id="D8c-as-GjJ"/>
+                            <constraint firstItem="K67-0J-55q" firstAttribute="leading" secondItem="F3M-G1-80v" secondAttribute="leading" id="tOr-Gb-kKY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="multipleImages" destination="K67-0J-55q" id="GTF-dY-XcJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgx-JF-LbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lq2-2n-b5A">
+                    <connections>
+                        <action selector="didTapImageView:" destination="a2F-K2-UGh" id="xmd-Wv-1Sf"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="62" y="815"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NatureImage1" width="2520" height="1008"/>
+    </resources>
 </document>

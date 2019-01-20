@@ -1,0 +1,30 @@
+PODS:
+  - JNMultipleImages (2.0.2):
+    - SDWebImage (~> 4.4.2)
+  - JNPhotosViewer (1.0.0):
+    - SDWebImage (~> 4.4.2)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
+
+DEPENDENCIES:
+  - JNMultipleImages (= 2.0.2)
+  - JNPhotosViewer (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JNMultipleImages
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  JNPhotosViewer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JNMultipleImages: 5b192f702ecfb07897ce1008c553a2ec5fc6115a
+  JNPhotosViewer: f180888b008b401f5fecabf856033fc76701c42f
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+
+PODFILE CHECKSUM: 14544f76dcfef1b3097531e5c96fc54d62c63327
+
+COCOAPODS: 1.5.3

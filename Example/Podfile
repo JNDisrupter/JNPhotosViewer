@@ -2,10 +2,9 @@ use_frameworks!
 
 target 'JNPhotosViewer_Example' do
   pod 'JNPhotosViewer', :path => '../'
-
+  pod 'JNMultipleImages', '2.0.2'
+  
   target 'JNPhotosViewer_Tests' do
     inherit! :search_paths
-
-    
   end
 end

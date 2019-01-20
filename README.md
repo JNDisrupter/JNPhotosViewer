@@ -44,13 +44,13 @@ var showDownloadButton: Bool
 1. JNPhotosViewerViewController
 2. JNPhotosViewerViewControllerDelegate
     1. photosViewerViewController(viewController: JNPhotosViewerViewController, refrenceViewFor photo: JNPhoto) -> UIImageView?
-        This method will return the image view for photo to use for dismiss animation if not provided the default animation will be appiled.
+    <br>This method will return the image view for photo to use for dismiss animation if not provided the default animation will be appiled.
     2. photosViewerViewController(viewController: JNPhotosViewerViewController, didClickDownload photo: JNPhoto, completion: () -> Void)
-        This method will be called when the download button clicked, call the completion to hide loading indicator from download button.
+        <br>This method will be called when the download button clicked, call the completion to hide loading indicator from download button.
 
 ## Author
 
-Jayel Zaghmoutt & Mohammad Nabulsi
+Yara AbuHijleh & Mohammad Nabulsi
 
 ## License
 

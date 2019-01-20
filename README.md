@@ -7,7 +7,7 @@
 
 ## Preview
 
-<img src="https://github.com/JNDisrupter/JNSegmentedControl/raw/master/Images/preview.gif" width="280"/> 
+<img src="https://github.com/JNDisrupter/JNPhotosViewer/raw/master/Images/preview.gif" width="280"/> 
 
 ## Example
 

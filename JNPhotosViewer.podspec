@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '9.0'
     s.source_files     = 'JNPhotosViewer/**/*.swift'
     s.resources        = 'JNPhotosViewer/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,ttf}'
-    s.dependency       'SDWebImage','~> 4.4.2'
+    s.dependency       'SDWebImage','~> 4.3.3'
 end

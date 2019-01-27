@@ -60,7 +60,7 @@ open class JNPhotosViewerCollectionViewCell: UICollectionViewCell , UIScrollView
      Make image view zoomable
      */
     private func makeImageViewZoomable() {
-        self.scrollView.decelerationRate = UIScrollView.DecelerationRate.fast
+//        self.scrollView.decelerationRate = UIScrollView.DecelerationRate.hash
         self.scrollView.alwaysBounceVertical = false
         self.scrollView.alwaysBounceHorizontal = false
         self.scrollView.bounces = false

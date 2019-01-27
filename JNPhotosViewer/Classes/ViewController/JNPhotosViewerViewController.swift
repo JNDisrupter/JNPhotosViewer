@@ -248,7 +248,7 @@ open class JNPhotosViewerViewController: UIViewController {
      Init download button indicator view
      */
     private func initDownloadButtonIndicatorView() {
-        self.downloadButtonIndicator  = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.white)
+        self.downloadButtonIndicator  = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorView.Style.white)
         self.downloadButtonIndicator.translatesAutoresizingMaskIntoConstraints = false
         self.downloadButtonIndicator.isHidden = true
         self.view.addSubview(self.downloadButtonIndicator)

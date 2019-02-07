@@ -26,11 +26,11 @@ open class JNPhotosViewerViewController: UIViewController {
     /// Download Button Indicator
     private var downloadButtonIndicator : UIActivityIndicatorView!
     
-    /// Selected image index
-    public var selectedImageIndex: Int = 0
-    
     /// Transition Handler
     private var transitionHandler: PhotosViewerTransitioningDelegate?
+    
+    /// Selected image index
+    public var selectedImageIndex: Int = 0
     
     /// Images list
     public var imagesList: [JNPhoto] = []
@@ -328,6 +328,9 @@ extension JNPhotosViewerViewController: UIScrollViewDelegate {
             // Set selected page
             self.selectedImageIndex = currentPage
             
+            // Did change page
+            self.delegate?.photosViewerViewController(viewController: self, didChangePage: self.selectedImageIndex)
+            
             // Update transition handler
             if let cell = self.collectionView.cellForItem(at: IndexPath(row: self.selectedImageIndex, section: 0)) as? JNPhotosViewerCollectionViewCell {
                 let endingImageView = self.delegate?.photosViewerViewController(viewController: self, refrenceViewFor: self.imagesList[self.selectedImageIndex])
@@ -400,7 +403,15 @@ public protocol JNPhotosViewerViewControllerDelegate: NSObjectProtocol {
      - Parameter photo: JNPhoto object
      - Parameter completion: The completion to call after finish proccesing the downlaod request, this completion will remove the loading from download button
      */
-    func photosViewerViewController(viewController: JNPhotosViewerViewController, didClickDownload photo: JNPhoto, completion: () -> Void)
+    func photosViewerViewController(viewController: JNPhotosViewerViewController, didClickDownload photo: JNPhoto, completion: @escaping () -> Void)
+    
+    /**
+     Tell the delegate that the page have been changed
+     - Parameter viewController: JNPhotos Viewer View Controller
+     - Parameter page: New page index
+     - Parameter completion: The completion to call after finish proccesing the downlaod request, this completion will remove the loading from download button
+     */
+    func photosViewerViewController(viewController: JNPhotosViewerViewController, didChangePage page: Int)
 }
 
 public extension JNPhotosViewerViewControllerDelegate {
@@ -411,5 +422,13 @@ public extension JNPhotosViewerViewControllerDelegate {
      - Parameter photo: JNPhoto object
      - Parameter completion: The completion to call after finish proccesing the downlaod request, this completion will remove the loading from download button
      */
-    func photosViewerViewController(viewController: JNPhotosViewerViewController, didClickDownload photo: JNPhoto, completion: () -> Void) {}
+    func photosViewerViewController(viewController: JNPhotosViewerViewController, didClickDownload photo: JNPhoto, completion: @escaping () -> Void) {}
+    
+    /**
+     Tell the delegate that the page have been changed
+     - Parameter viewController: JNPhotos Viewer View Controller
+     - Parameter page: New page index
+     - Parameter completion: The completion to call after finish proccesing the downlaod request, this completion will remove the loading from download button
+     */
+    func photosViewerViewController(viewController: JNPhotosViewerViewController, didChangePage page: Int) {}
 }

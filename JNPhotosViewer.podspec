@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                          = 'JNPhotosViewer'
-    s.version                       = '1.0.1'
+    s.version                       = '1.0.2'
     s.summary                       = 'summery of JNPhotosViewer.'
     s.description                   = 'Library for viewing multiple images with animation for presenting and dismissing.'
     s.homepage                      = 'https://github.com/JNDisrupter'

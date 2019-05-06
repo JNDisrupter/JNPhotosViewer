@@ -28,12 +28,6 @@ open class JNPhotosViewerCollectionViewCell: UICollectionViewCell , UIScrollView
         // Make image scrollable
         self.makeImageViewZoomable()
         
-        // change activity indicator style
-        self.imageView.sd_setIndicatorStyle(UIActivityIndicatorView.Style.whiteLarge)
-        
-        // Show activity indicator
-        self.imageView.sd_setShowActivityIndicatorView(true)
-        
         // Set content mode
         self.imageView.contentMode = UIView.ContentMode.scaleAspectFit
     }
@@ -46,13 +40,19 @@ open class JNPhotosViewerCollectionViewCell: UICollectionViewCell , UIScrollView
     open func setup(photo: JNPhoto) {
         if let image = photo.image {
             self.imageView.image = image
+            self.imageView.sd_imageIndicator = nil
         } else {
+            
+            // Change activity indicator style
+            self.imageView.sd_imageIndicator = SDWebImageActivityIndicator.whiteLarge
+            
             let mediaUrl = photo.imageUrl
-            self.imageView.sd_setImage(with: URL(string: mediaUrl), placeholderImage: nil, options: [] , completed: { (image,error,cacheType, imageURL) in
+            self.imageView.sd_setImage(with: URL(string: mediaUrl)) { (image, error, cacheType, url) in
+                self.imageView.sd_imageIndicator = nil
                 if error != nil {
                     self.imageView?.image = photo.placeholderImage
                 }
-            })
+            }
         }
     }
     

@@ -42,7 +42,7 @@ extension MultiplemagesViewController: JNPhotosViewerViewControllerDelegate {
      - Returns: Refrence view for photo
      */
     func photosViewerViewController(viewController: JNPhotosViewerViewController, refrenceViewFor photo: JNPhoto) -> UIImageView? {
-        let photoIndex = self.mediaList.index(where: { item in return item == photo.image! }) ?? 0
+        let photoIndex = self.mediaList.firstIndex(where: { item in return item == photo.image! }) ?? 0
         return self.multipleImages.getMediaView(at: photoIndex)
     }
     

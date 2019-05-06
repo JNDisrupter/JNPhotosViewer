@@ -108,6 +108,8 @@ class JNScalableImageView: UIView {
         case .bottomRight:
             self.imageView.bounds = CGRect(origin: .zero, size: image.size)
             self.imageView.center = CGPoint(x: self.bounds.size.width - image.size.width / 2, y: self.bounds.size.height - image.size.height / 2)
+        @unknown default:
+            break
         }
     }
 }

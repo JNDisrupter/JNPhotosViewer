@@ -24,7 +24,6 @@ class SingleImageViewController: UIViewController {
      */
     @IBAction func didTapImageView(_ sender: Any) {
         
-        
         var jnPhoto = JNPhoto()
         jnPhoto.image = imageView.image
         

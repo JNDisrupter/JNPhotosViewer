@@ -114,6 +114,8 @@ open class JNPhotosViewerViewController: UIViewController {
         self.transitionHandler = PhotosViewerTransitioningDelegate()
         self.transitionHandler?.setupPresentation(startingImageView: startingImageView)
         self.transitioningDelegate = self.transitionHandler
+        
+        self.view.bringSubviewToFront(self.closeButton)
     }
     
     /**
@@ -203,6 +205,13 @@ open class JNPhotosViewerViewController: UIViewController {
         self.closeButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
         self.closeButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
         self.closeButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16).isActive = true
+        
+        // Add shadow to close button
+        self.closeButton.layer.shadowColor = UIColor.black.cgColor
+        self.closeButton.layer.shadowOffset = CGSize.zero
+        self.closeButton.layer.shadowOpacity = 0.4
+        self.closeButton.layer.shadowRadius = 6
+        self.closeButton.layer.masksToBounds = false
         
         if #available(iOS 11, *) {
             let guide = self.view.safeAreaLayoutGuide

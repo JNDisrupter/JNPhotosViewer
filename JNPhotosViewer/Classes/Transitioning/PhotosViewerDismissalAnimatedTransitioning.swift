@@ -61,12 +61,12 @@ class PhotosViewerDismissalAnimatedTransitioning: NSObject, UIViewControllerAnim
     
     func start(_ transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        self.fromView = transitionContext.view(forKey: UITransitionContextViewKey.from)!
+        self.fromView = transitionContext.view(forKey: UITransitionContextViewKey.from)
         let containerView = transitionContext.containerView
-        let fromSuperView = self.startingImageView.superview!
+        let fromSuperView = self.startingImageView.superview
         
         self.scalableImageview.image = self.startingImageView.image
-        self.scalableImageview.frame = (fromSuperView.convert(self.startingImageView.frame, to: nil))
+        self.scalableImageview.frame = (fromSuperView?.convert(self.startingImageView.frame, to: nil) ?? self.startingImageView.frame)
         self.scalableImageview.contentMode = .scaleAspectFit
         
         self.fromView?.isHidden = true
@@ -96,10 +96,10 @@ class PhotosViewerDismissalAnimatedTransitioning: NSObject, UIViewControllerAnim
         let duration = self.transitionDuration(using: self.transitionContext)
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseInOut, animations: {
             self.overlayView.alpha = 0.0
-            if let endingImageView = self.endingImageView {
+            if let endingImageView = self.endingImageView, let superView = endingImageView.superview {
                 self.scalableImageview.contentMode = endingImageView.contentMode
                 self.scalableImageview.transform = .identity
-                self.scalableImageview.frame = endingImageView.superview!.convert(endingImageView.frame, to: nil)
+                self.scalableImageview.frame = superView.convert(endingImageView.frame, to: nil)
             } else {
                 self.scalableImageview.alpha = 0.0
             }

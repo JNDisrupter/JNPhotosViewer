@@ -187,6 +187,12 @@ open class JNPhotosViewerViewController: UIViewController {
         self.collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         self.collectionView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         self.collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        
+        if #available(iOS 11.0, *) {
+            self.collectionView.contentInsetAdjustmentBehavior = .never
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
     }
     
     // MARK: - Close button
@@ -195,8 +201,12 @@ open class JNPhotosViewerViewController: UIViewController {
      Init close button
      */
     private func initCloseButton() {
+        
+        // Initialize bundle
+        let bundle = Bundle(for: JNPhotosViewerViewController.self)
+        
         self.closeButton = UIButton()
-        self.closeButton.setImage(UIImage(named: "ImageCloseButton"), for: UIControl.State.normal)
+        self.closeButton.setImage(UIImage(named: "ImageCloseButton", in: bundle, compatibleWith: nil), for: UIControl.State.normal)
         self.closeButton.addTarget(self, action: #selector(self.didClickCloseButton), for: UIControl.Event.touchUpInside)
         self.closeButton.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.closeButton)
@@ -234,8 +244,11 @@ open class JNPhotosViewerViewController: UIViewController {
      Init download button
      */
     private func initDownloadButton() {
+        // Initialize bundle
+        let bundle = Bundle(for: JNPhotosViewerViewController.self)
+        
         self.downloadButton = UIButton()
-        self.downloadButton.setImage(UIImage(named: "DownloadImage"), for: UIControl.State.normal)
+        self.downloadButton.setImage(UIImage(named: "DownloadImage", in: bundle, compatibleWith: nil), for: UIControl.State.normal)
         self.downloadButton.addTarget(self, action: #selector(self.didClickDownloadButton), for: UIControl.Event.touchUpInside)
         self.downloadButton.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.downloadButton)

@@ -1,10 +1,10 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
+platform :ios, '9.0'
+
 
 target 'JNPhotosViewer_Example' do
   pod 'JNPhotosViewer', :path => '../'
   pod 'JNMultipleImages', '2.0.3'
-  
-  target 'JNPhotosViewer_Tests' do
-    inherit! :search_paths
-  end
 end

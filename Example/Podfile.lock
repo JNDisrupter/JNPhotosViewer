@@ -1,14 +1,14 @@
 PODS:
-  - JNMultipleImages (2.0.3):
-    - SDWebImage (~> 5.0.2)
+  - JNMultipleImages (2.0.4):
+    - SDWebImage
   - JNPhotosViewer (1.0.5):
-    - SDWebImage (~> 5.0.2)
-  - SDWebImage (5.0.6):
-    - SDWebImage/Core (= 5.0.6)
-  - SDWebImage/Core (5.0.6)
+    - SDWebImage
+  - SDWebImage (5.16.0):
+    - SDWebImage/Core (= 5.16.0)
+  - SDWebImage/Core (5.16.0)
 
 DEPENDENCIES:
-  - JNMultipleImages (= 2.0.3)
+  - JNMultipleImages
   - JNPhotosViewer (from `../`)
 
 SPEC REPOS:
@@ -21,10 +21,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JNMultipleImages: c24cc682ead780da42dd63ec1d683488973c9bf9
-  JNPhotosViewer: 478b4e0331d5c354c5dc3c06a7e41f3046b1984f
-  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
+  JNMultipleImages: 506c677bcbd9d5bd95918c60a07be7d8a19fd28a
+  JNPhotosViewer: ee030b97c9ce62c0301f143c5c7b681e98e98ab5
+  SDWebImage: 2aea163b50bfcb569a2726b6a754c54a4506fcf6
 
-PODFILE CHECKSUM: 6c7f6faae0af8b99115375ce6d668064c3049f68
+PODFILE CHECKSUM: 7fffa359805e37e06681e8e05d898cd91a96e561
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.12.1

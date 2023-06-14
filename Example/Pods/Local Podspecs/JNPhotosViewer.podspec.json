@@ -24,7 +24,7 @@
   "resources": "JNPhotosViewer/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,ttf}",
   "dependencies": {
     "SDWebImage": [
-      "~> 5.0.2"
+
     ]
   },
   "swift_version": "5.7"

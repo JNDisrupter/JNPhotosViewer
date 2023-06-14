@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
     s.source                          = { :git => "https://github.com/JNDisrupter/JNPhotosViewer.git", :tag => "#{s.version}" }
     s.source_files                    = 'JNPhotosViewer/**/*.swift'
     s.resources                       = 'JNPhotosViewer/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,ttf}'
-    s.dependency                      'SDWebImage','~> 5.0.2'
+    s.dependency                      'SDWebImage'
 end

@@ -6,5 +6,5 @@ platform :ios, '11.0'
 
 target 'JNPhotosViewer_Example' do
   pod 'JNPhotosViewer', :path => '../'
-  pod 'JNMultipleImages', '2.0.3'
+  pod 'JNMultipleImages'
 end

@@ -153,7 +153,10 @@ open class JNPhotosViewerViewController: UIViewController {
         
         // Create flow layout
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = UIScreen.main.bounds.size
+        
+        // Set Item Size
+        layout.itemSize = JNPhotosViewerUtils.getMainScreen().bounds.size
+        
         layout.headerReferenceSize = CGSize.zero
         
         // Set minumem spacing between items

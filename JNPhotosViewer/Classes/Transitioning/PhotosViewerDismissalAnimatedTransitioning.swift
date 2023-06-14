@@ -12,7 +12,7 @@ import UIKit
 class PhotosViewerDismissalAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
     
     /// Transition Context
-    fileprivate var transitionContext: UIViewControllerContextTransitioning?
+    fileprivate weak var transitionContext: UIViewControllerContextTransitioning?
     
     /// Starting Image View
     fileprivate var startingImageView: UIImageView

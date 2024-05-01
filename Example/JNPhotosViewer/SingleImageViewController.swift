@@ -17,6 +17,9 @@ class SingleImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set Title
+        self.title = "Single Image"
     }
 
     /**

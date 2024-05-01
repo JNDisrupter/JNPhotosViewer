@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Sm-IK-Mwc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Sm-IK-Mwc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,6 +14,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J7M-ri-fK5">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.46274509800000002" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="MZL-wt-v5h" kind="relationship" relationship="rootViewController" id="GC3-nf-NIE"/>
@@ -25,7 +30,7 @@
             </objects>
             <point key="canvasLocation" x="-678" y="134"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Photo Viewer-->
         <scene sceneID="ko9-Kh-aTv">
             <objects>
                 <tableViewController id="MZL-wt-v5h" sceneMemberID="viewController">
@@ -37,7 +42,7 @@
                             <tableViewSection id="LoY-tD-Zgr">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="UCx-hV-5Px" style="IBUITableViewCellStyleDefault" id="BUT-cW-bYx">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BUT-cW-bYx" id="TQ3-4c-8qU">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -57,7 +62,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="0P7-Ln-e08" style="IBUITableViewCellStyleDefault" id="YJz-4V-0x7">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="93.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YJz-4V-0x7" id="7F1-e6-rAm">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -84,7 +89,7 @@
                             <outlet property="delegate" destination="MZL-wt-v5h" id="9jP-qm-kz9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ELg-8j-B4P"/>
+                    <navigationItem key="navigationItem" title="Photo Viewer" id="ELg-8j-B4P"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MG7-S4-aFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

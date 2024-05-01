@@ -59,13 +59,24 @@ class JNScalableImageView: UIView {
             self.imageView.bounds = CGRect(origin: .zero, size: self.bounds.size)
             self.imageView.center = CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
         case .scaleAspectFit:
-            self.imageView.bounds = AVMakeRect(aspectRatio: image.size, insideRect: self.bounds)
-            self.imageView.center = CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
+            if image.size.width > image.size.height {
+                let imageViewFrame = AVMakeRect(aspectRatio: image.size, insideRect: self.bounds)
+                self.imageView.bounds = CGRect(origin: .zero, size: imageViewFrame.size)
+                self.imageView.center = CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
+            } else {
+                let imageRatio = image.size.width / image.size.height
+                self.imageView.bounds = CGRect(x: 0, y: 0, width: self.bounds.width, height: floor(self.bounds.width / imageRatio))
+                self.imageView.center = CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
+            }
         case .scaleAspectFill:
             let imageRatio = image.size.width / image.size.height
             let insideRectRatio = bounds.width / bounds.height
             if imageRatio > insideRectRatio {
-                self.imageView.bounds = CGRect(x: 0, y: 0, width: floor(self.bounds.height * imageRatio), height: self.bounds.height)
+                if image.size.width > image.size.height {
+                    self.imageView.bounds = CGRect(x: 0, y: 0, width: floor(self.bounds.height * imageRatio), height: self.bounds.height)
+                } else {
+                    self.imageView.bounds = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.width / imageRatio)
+                }
             } else {
                 self.imageView.bounds = CGRect(x: 0, y: 0, width: self.bounds.width, height: floor(self.bounds.width / imageRatio))
             }

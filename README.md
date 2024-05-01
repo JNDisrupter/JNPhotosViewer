@@ -15,9 +15,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- iOS 9.0+ / macOS 10.10+
-- Xcode 9.0+
-- Swift 4+
+- iOS 11.0+ / macOS 14+
+- Xcode 15.3+
+- Swift 5.10+
 
 ## Installation
 
@@ -54,7 +54,7 @@ var showDownloadButton: Bool
 
 ## Author
 
-Yara AbuHijleh & Mohammad Nabulsi
+Yara AbuHijleh & Mohammad Nabulsi & Jayel Zaghmoutt
 
 ## License
 

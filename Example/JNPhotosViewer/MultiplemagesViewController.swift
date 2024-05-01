@@ -29,6 +29,9 @@ class MultiplemagesViewController: UIViewController {
         // Setup multiple images view
         self.multipleImages.setup(images: self.mediaList)
         self.multipleImages.delegate = self
+        
+        // Set Title
+        self.title = "Multiple Images"
     }
 }
 

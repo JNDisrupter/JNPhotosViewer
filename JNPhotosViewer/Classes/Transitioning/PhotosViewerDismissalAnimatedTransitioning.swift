@@ -93,6 +93,7 @@ class PhotosViewerDismissalAnimatedTransitioning: NSObject, UIViewControllerAnim
     }
     
     func finish() {
+        self.transitionContext?.finishInteractiveTransition()
         let duration = self.transitionDuration(using: self.transitionContext)
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseInOut, animations: {
             self.overlayView.alpha = 0.0

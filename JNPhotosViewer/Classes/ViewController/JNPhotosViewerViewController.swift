@@ -93,7 +93,7 @@ open class JNPhotosViewerViewController: UIViewController {
         super.viewDidLoad()
         
         // Set background color
-        self.view.backgroundColor = UIColor.clear
+        self.view.backgroundColor = UIColor.black
         
         // Init media collection view
         self.initImageCollectionView()
@@ -141,6 +141,26 @@ open class JNPhotosViewerViewController: UIViewController {
         }
     }
     
+    /**
+     View will transition
+     */
+    open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        coordinator.animate { _ in
+            
+            // Get layout
+            if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+                
+                // Set Item Size
+                layout.itemSize = JNPhotosViewerUtils.getMainScreen().bounds.size
+            }
+            
+            // Reload data
+            self.collectionView.reloadData()
+        }
+    }
+    
     /// Prefers Status Bar Hidden
     open override var prefersStatusBarHidden: Bool {
         return true
@@ -179,7 +199,7 @@ open class JNPhotosViewerViewController: UIViewController {
         
         // Set collection view background
         self.collectionView.backgroundView = nil
-        self.collectionView.backgroundColor = UIColor.black
+        self.collectionView.backgroundColor = UIColor.clear
         
         // Add as subview
         self.view.insertSubview(self.collectionView, at: 0)

@@ -93,7 +93,7 @@ open class JNPhotosViewerViewController: UIViewController {
         super.viewDidLoad()
         
         // Set background color
-        self.view.backgroundColor = UIColor.clear
+        self.view.backgroundColor = UIColor.black
         
         // Init media collection view
         self.initImageCollectionView()
@@ -141,6 +141,41 @@ open class JNPhotosViewerViewController: UIViewController {
         }
     }
     
+    /**
+     View will transition
+     */
+    open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        // Get Index Path
+        let indexPath = IndexPath(row: self.selectedImageIndex, section: 0)
+        
+        coordinator.animate { [weak self] _ in
+            
+            // Weak Self
+            guard let self = self else { return }
+            
+            // Get layout
+            if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+                
+                // Set Item Size
+                layout.itemSize = JNPhotosViewerUtils.getMainScreen().bounds.size
+            }
+            
+            // Reload data
+            self.collectionView.reloadData()
+            
+        } completion: { [weak self] _ in
+            
+            // Weak Self
+            guard let self = self else { return }
+            
+            // Keep the current page centered during rotation
+            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
+    }
+    
+
     /// Prefers Status Bar Hidden
     open override var prefersStatusBarHidden: Bool {
         return true
@@ -179,7 +214,7 @@ open class JNPhotosViewerViewController: UIViewController {
         
         // Set collection view background
         self.collectionView.backgroundView = nil
-        self.collectionView.backgroundColor = UIColor.black
+        self.collectionView.backgroundColor = UIColor.clear
         
         // Add as subview
         self.view.insertSubview(self.collectionView, at: 0)

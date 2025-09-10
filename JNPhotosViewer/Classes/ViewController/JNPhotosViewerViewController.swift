@@ -147,7 +147,13 @@ open class JNPhotosViewerViewController: UIViewController {
     open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
-        coordinator.animate { _ in
+        // Get Index Path
+        let indexPath = IndexPath(row: self.selectedImageIndex, section: 0)
+        
+        coordinator.animate { [weak self] _ in
+            
+            // Weak Self
+            guard let self = self else { return }
             
             // Get layout
             if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -158,9 +164,18 @@ open class JNPhotosViewerViewController: UIViewController {
             
             // Reload data
             self.collectionView.reloadData()
+            
+        } completion: { [weak self] _ in
+            
+            // Weak Self
+            guard let self = self else { return }
+            
+            // Keep the current page centered during rotation
+            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
     }
     
+
     /// Prefers Status Bar Hidden
     open override var prefersStatusBarHidden: Bool {
         return true

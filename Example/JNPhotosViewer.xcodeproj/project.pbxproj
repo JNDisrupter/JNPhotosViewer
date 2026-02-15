@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,13 +13,11 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		8422150921F4B0BA0059AB16 /* MultiplemagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422150821F4B0BA0059AB16 /* MultiplemagesViewController.swift */; };
-		F7191CF38EE4063798CC13CD /* Pods_JNPhotosViewer_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04030F2F52CBC8DDA6F3BC16 /* Pods_JNPhotosViewer_Example.framework */; };
+		86A1BC722F41F60A00FADF27 /* JNPhotosViewer in Frameworks */ = {isa = PBXBuildFile; productRef = 86A1BC712F41F60A00FADF27 /* JNPhotosViewer */; };
+		86E24FD62F3B6ED6000952F3 /* JNPhotosViewer in Frameworks */ = {isa = PBXBuildFile; productRef = 86E24FD52F3B6ED6000952F3 /* JNPhotosViewer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04030F2F52CBC8DDA6F3BC16 /* Pods_JNPhotosViewer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JNPhotosViewer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B65CA04DE670E71C5C0C5D4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		5A2591724C9254134DBE1D77 /* Pods-JNPhotosViewer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JNPhotosViewer_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JNPhotosViewer_Tests/Pods-JNPhotosViewer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* JNPhotosViewer_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JNPhotosViewer_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -27,12 +25,7 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		67B5E901CDB3440B679D0CC7 /* Pods-JNPhotosViewer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JNPhotosViewer_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JNPhotosViewer_Tests/Pods-JNPhotosViewer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8422150821F4B0BA0059AB16 /* MultiplemagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplemagesViewController.swift; sourceTree = "<group>"; };
-		8DB0FF2D94158DB91208B05A /* Pods-JNPhotosViewer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JNPhotosViewer_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JNPhotosViewer_Example/Pods-JNPhotosViewer_Example.release.xcconfig"; sourceTree = "<group>"; };
-		C58F9F77B32D797D55DFF093 /* Pods-JNPhotosViewer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JNPhotosViewer_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JNPhotosViewer_Example/Pods-JNPhotosViewer_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		CBC9C3AA4B391C7B343E79D7 /* JNPhotosViewer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JNPhotosViewer.podspec; path = ../JNPhotosViewer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		E19A1F0DD253D49626565673 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,32 +33,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7191CF38EE4063798CC13CD /* Pods_JNPhotosViewer_Example.framework in Frameworks */,
+				86E24FD62F3B6ED6000952F3 /* JNPhotosViewer in Frameworks */,
+				86A1BC722F41F60A00FADF27 /* JNPhotosViewer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2EC7A621EEFA0D6F0109B2CB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C58F9F77B32D797D55DFF093 /* Pods-JNPhotosViewer_Example.debug.xcconfig */,
-				8DB0FF2D94158DB91208B05A /* Pods-JNPhotosViewer_Example.release.xcconfig */,
-				5A2591724C9254134DBE1D77 /* Pods-JNPhotosViewer_Tests.debug.xcconfig */,
-				67B5E901CDB3440B679D0CC7 /* Pods-JNPhotosViewer_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for JNPhotosViewer */,
 				607FACD11AFB9204008FA782 /* Products */,
-				2EC7A621EEFA0D6F0109B2CB /* Pods */,
-				C192BF23E06B597952C6EF83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,24 +80,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				CBC9C3AA4B391C7B343E79D7 /* JNPhotosViewer.podspec */,
-				E19A1F0DD253D49626565673 /* README.md */,
-				1B65CA04DE670E71C5C0C5D4 /* LICENSE */,
-			);
-			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		C192BF23E06B597952C6EF83 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				04030F2F52CBC8DDA6F3BC16 /* Pods_JNPhotosViewer_Example.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,11 +87,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "JNPhotosViewer_Example" */;
 			buildPhases = (
-				EFD8FF2AFB8D62DAC621E18C /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				74DB50DB85094216FC073694 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +126,9 @@
 				Base,
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
+			packageReferences = (
+				86A1BC702F41F60A00FADF27 /* XCLocalSwiftPackageReference "../../JNPhotosViewer" */,
+			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,49 +150,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		74DB50DB85094216FC073694 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JNPhotosViewer_Example/Pods-JNPhotosViewer_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/JNMultipleImages/JNMultipleImages.framework",
-				"${BUILT_PRODUCTS_DIR}/JNPhotosViewer/JNPhotosViewer.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JNMultipleImages.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JNPhotosViewer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JNPhotosViewer_Example/Pods-JNPhotosViewer_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EFD8FF2AFB8D62DAC621E18C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JNPhotosViewer_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		607FACCC1AFB9204008FA782 /* Sources */ = {
@@ -314,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -366,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -378,11 +298,11 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C58F9F77B32D797D55DFF093 /* Pods-JNPhotosViewer_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = JNPhotosViewer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -397,11 +317,11 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DB0FF2D94158DB91208B05A /* Pods-JNPhotosViewer_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = JNPhotosViewer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,6 +356,24 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		86A1BC702F41F60A00FADF27 /* XCLocalSwiftPackageReference "../../JNPhotosViewer" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../JNPhotosViewer;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		86A1BC712F41F60A00FADF27 /* JNPhotosViewer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JNPhotosViewer;
+		};
+		86E24FD52F3B6ED6000952F3 /* JNPhotosViewer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JNPhotosViewer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }

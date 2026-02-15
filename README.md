@@ -15,18 +15,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- iOS 11.0+ / macOS 14+
+- iOS 12.0+ / macOS 14+
 - Xcode 15.3+
 - Swift 5.10+
 
 ## Installation
 
-JNPhotosViewer is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+SDWebImage support SwiftPM. To use SwiftPM, you should use Xcode 15.3 to open your project. Click `File` -> `Swift Packages` -> `Add Package Dependency`, enter [JNPhotosViewer repo's URL](https://github.com/JNDisrupter/JNPhotosViewer.git)
 
-```ruby
-pod 'JNPhotosViewer'
-```
 ## Setup
 
 ```swift

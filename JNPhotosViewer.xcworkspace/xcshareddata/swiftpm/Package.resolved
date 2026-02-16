@@ -1,6 +1,15 @@
 {
-  "originHash" : "23ae6c247b326cad7edf5eb7422d07b4f4f1266a63052283c655c702b8593a2d",
+  "originHash" : "fbc745c24e006679812a8b595996d3c7231c507814fc6763ab0e1e9d3edc4a24",
   "pins" : [
+    {
+      "identity" : "jnmultipleimages",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JNDisrupter/JNMultipleImages",
+      "state" : {
+        "branch" : "update-to-SPM",
+        "revision" : "e4d12d124577f84ed44ec3a492d70088a7c0c068"
+      }
+    },
     {
       "identity" : "sdwebimage",
       "kind" : "remoteSourceControl",

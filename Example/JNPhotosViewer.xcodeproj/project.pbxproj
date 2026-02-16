@@ -15,6 +15,7 @@
 		8422150921F4B0BA0059AB16 /* MultiplemagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422150821F4B0BA0059AB16 /* MultiplemagesViewController.swift */; };
 		86A1BC722F41F60A00FADF27 /* JNPhotosViewer in Frameworks */ = {isa = PBXBuildFile; productRef = 86A1BC712F41F60A00FADF27 /* JNPhotosViewer */; };
 		86E24FD62F3B6ED6000952F3 /* JNPhotosViewer in Frameworks */ = {isa = PBXBuildFile; productRef = 86E24FD52F3B6ED6000952F3 /* JNPhotosViewer */; };
+		86F415982F43415F000231B6 /* JNMultipleImages in Frameworks */ = {isa = PBXBuildFile; productRef = 86F415972F43415F000231B6 /* JNMultipleImages */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86F415982F43415F000231B6 /* JNMultipleImages in Frameworks */,
 				86E24FD62F3B6ED6000952F3 /* JNPhotosViewer in Frameworks */,
 				86A1BC722F41F60A00FADF27 /* JNPhotosViewer in Frameworks */,
 			);
@@ -128,6 +130,7 @@
 			mainGroup = 607FACC71AFB9204008FA782;
 			packageReferences = (
 				86A1BC702F41F60A00FADF27 /* XCLocalSwiftPackageReference "../../JNPhotosViewer" */,
+				86F415962F43415F000231B6 /* XCRemoteSwiftPackageReference "JNMultipleImages" */,
 			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
@@ -364,6 +367,17 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		86F415962F43415F000231B6 /* XCRemoteSwiftPackageReference "JNMultipleImages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JNDisrupter/JNMultipleImages";
+			requirement = {
+				branch = "update-to-SPM";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		86A1BC712F41F60A00FADF27 /* JNPhotosViewer */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -372,6 +386,11 @@
 		86E24FD52F3B6ED6000952F3 /* JNPhotosViewer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = JNPhotosViewer;
+		};
+		86F415972F43415F000231B6 /* JNMultipleImages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86F415962F43415F000231B6 /* XCRemoteSwiftPackageReference "JNMultipleImages" */;
+			productName = JNMultipleImages;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

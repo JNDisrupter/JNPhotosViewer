@@ -67,7 +67,7 @@ extension MultiplemagesViewController: JNMultipleImagesViewDelegate {
      Did click item at index
      - parameter atIndex: The clicked item index
      */
-    func jsMultipleImagesView(didClickItem atIndex : Int) {
+    func jnMultipleImagesView(didClickItem atIndex : Int, for multipleImagesView: JNMultipleImagesView) {
         
         let photosList = self.mediaList.map({ (item) -> JNPhoto in
             var jnPhoto = JNPhoto()

@@ -1,0 +1,24 @@
+{
+  "originHash" : "d3fe96f409ebeff330e959a0eb84b51d580ecc79eb0fe5d8425c397224b4d185",
+  "pins" : [
+    {
+      "identity" : "jnmultipleimages",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JNDisrupter/JNMultipleImages",
+      "state" : {
+        "revision" : "63a4cfdef95496c443d03ad5c9beeb0b0903d6fc",
+        "version" : "3.0.0"
+      }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+        "version" : "5.21.7"
+      }
+    }
+  ],
+  "version" : 3
+}

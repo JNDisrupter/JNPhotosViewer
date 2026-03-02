@@ -15,7 +15,7 @@ let package = Package(
             targets: ["JNPhotosViewer"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: Version(stringLiteral: "5.0.0")),
+        .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.0.0"),
     ]
     ,
     targets: [

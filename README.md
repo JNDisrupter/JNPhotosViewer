@@ -1,7 +1,6 @@
 # JNPhotosViewer
 
 [![CI Status](https://img.shields.io/travis/mohammadnabulsi/JNPhotosViewer.svg?style=flat)](https://travis-ci.org/mohammadnabulsi/JNPhotosViewer)
-[![Version](https://img.shields.io/cocoapods/v/JNPhotosViewer.svg?style=flat)](https://cocoapods.org/pods/JNPhotosViewer)
 [![License](https://img.shields.io/cocoapods/l/JNPhotosViewer.svg?style=flat)](https://cocoapods.org/pods/JNPhotosViewer)
 [![Platform](https://img.shields.io/cocoapods/p/JNPhotosViewer.svg?style=flat)](https://cocoapods.org/pods/JNPhotosViewer)
 
@@ -15,18 +14,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- iOS 11.0+ / macOS 14+
-- Xcode 15.3+
+- iOS 12.0+ / macOS 15.7+
+- Xcode 26+
 - Swift 5.10+
 
-## Installation
+## Installation with Swift Package Manager
 
-JNPhotosViewer is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+JNPhotosViewer support SwiftPM. To use SwiftPM, you should use Xcode 26 to open your project. Click `File` -> `Swift Packages` -> `Add Package Dependency`, enter [JNPhotosViewer repo's URL](https://github.com/JNDisrupter/JNPhotosViewer.git)
 
-```ruby
-pod 'JNPhotosViewer'
-```
 ## Setup
 
 ```swift
